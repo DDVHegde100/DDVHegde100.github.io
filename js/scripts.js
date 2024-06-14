@@ -1,4 +1,3 @@
-// Add your JavaScript animations here
 document.addEventListener('DOMContentLoaded', function() {
     const animatedText = document.querySelector('.animated-text');
     let direction = 1;

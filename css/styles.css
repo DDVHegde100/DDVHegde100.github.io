@@ -5,7 +5,7 @@ body {
 }
 
 .sidebar {
-    width: 200px;
+    width: 250px;
     background-color: #333;
     color: #fff;
     height: 100vh;
@@ -32,14 +32,21 @@ body {
 }
 
 main {
-    margin-left: 200px;
+    margin-left: 250px;
     padding: 20px;
     flex: 1;
+}
+
+.section {
+    margin-bottom: 50px;
 }
 
 .intro {
     display: flex;
     align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100vh;
 }
 
 .intro img {
