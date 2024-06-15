@@ -12,6 +12,117 @@ body {
     cursor: none;
 }
 
+/* Additional styles for typing animation */
+.description-container {
+    max-width: 1200px; /* Adjust as needed */
+    margin: 0 auto;
+    text-align: justify; /* Justify text for wrapping effect */
+}
+
+.typing-text {
+    font-size: 18px; /* Adjust font size */
+    color: #fff; /* Text color */
+    filter: blur(0.5px); /* Motion blur effect */
+    white-space: pre-wrap; /* Allow wrapping at any point */
+    line-height: 1.5; /* Adjust line height */
+}
+
+/* Preloader styles */
+/* Additional styles for typing animation */
+.description-container {
+    max-width: 800px; /* Adjust as needed */
+    margin: 0 auto;
+    text-align: justify; /* Justify text for wrapping effect */
+}
+
+.typing-text {
+    font-size: 18px; /* Adjust font size */
+    color: #fff; /* Text color */
+    filter: blur(0.5px); /* Motion blur effect */
+    white-space: pre-wrap; /* Allow wrapping at any point */
+    line-height: 1.5; /* Adjust line height */
+}
+
+/* Preloader styles */
+.preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    opacity: 1;
+    transition: opacity 0.5s ease;
+}
+
+.preloader.fade-out {
+    opacity: 0;
+    pointer-events: none; /* Ensure preloader is not clickable after fade-out */
+}
+
+/* Animation for Dhruv Hegde */
+.dhruv-hegde-animation {
+    font-family: 'Outfit', sans-serif;
+    font-size: 48px;
+    color: #fff;
+    position: relative;
+    z-index: 1001;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    animation: dhruv-animation 3s ease-in-out forwards;
+}
+
+@keyframes dhruv-animation {
+    0% {
+        transform: translateY(-100px) scale(0.2);
+        opacity: 0;
+    }
+    50% {
+        transform: translateY(0) scale(1.2);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-50px) scale(1);
+        opacity: 1;
+    }
+}
+
+/* Animation for Go Explore */
+.go-explore-animation {
+    font-family: 'Outfit', sans-serif;
+    font-size: 48px;
+    color: #fff;
+    position: relative;
+    z-index: 1001;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    animation: go-explore-animation 3s ease-in-out forwards;
+}
+
+@keyframes go-explore-animation {
+    0% {
+        transform: translateY(100px) scale(0.2);
+        opacity: 0;
+    }
+    50% {
+        transform: translateY(0) scale(1.2);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(50px) scale(1);
+        opacity: 1;
+    }
+}
+
 .background-overlay {
     position: absolute;
     top: 0;
@@ -56,23 +167,23 @@ header {
 }
 
 .custom-cursor {
-    position: fixed;
-    top: -10px;
-    left: -10px;
     width: 20px;
     height: 20px;
-    border-radius: 50%;
     border: 2px solid #fff;
-    background-color: transparent;
+    border-radius: 50%;
+    position: absolute;
     pointer-events: none;
-    transition: transform 0.1s ease, width 0.3s ease, height 0.3s ease, border-width 0.3s ease;
+    transition: width 0.3s, height 0.3s, border-width 0.3s, transform 0.3s;
+    transform: translate(-50%, -50%);
     z-index: 9999;
 }
 
-.custom-cursor.hover-white {
-    background-color: #000;
-    border-color: #fff;
+/* Hide custom cursor when cursor-hidden class is applied */
+.custom-cursor.cursor-hidden {
+    opacity: 0;
+    transition: opacity 0.1s ease;
 }
+
 
 nav ul li a {
     position: relative;
@@ -88,8 +199,61 @@ nav ul li a span {
     z-index: 1; /* Ensure links are above custom cursor */
 }
 
-nav ul li a:hover span {
-    border: 2px solid #fff; /* Show border on hover */
+
+/* General styles */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow-x: hidden;
+    font-family: 'Outfit', sans-serif; /* Ensure consistent font */
+    background-color: #111; /* Background color for the body */
+    color: #fff; /* Default text color */
+}
+
+/* Header styles */
+header {
+    position: fixed;
+    top: 20px; /* Adjust the top distance as needed */
+    left: 20px; /* Adjust the left distance as needed */
+    right: 20px; /* Adjust the right distance as needed */
+    background-color: rgba(255, 255, 255, 0.1); /* Glass-like background color */
+    backdrop-filter: blur(10px); /* Apply backdrop filter for glass effect */
+    border-radius: 20px; /* Rounded corners */
+    padding: 10px 20px; /* Padding inside the header */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1001; /* Ensure header is above other content */
+    transition: top 0.3s ease, background-color 0.3s ease; /* Smooth transition */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 24px; /* Adjust font size */
+    color: #fff; /* Text color */
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff; /* Link color */
+    font-size: 18px; /* Adjust font size */
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: rgb(241, 241, 241); /* Adjust hover color */
 }
 
 
@@ -109,6 +273,90 @@ header nav ul li a {
     color: #fff;
     text-decoration: none;
 }
+/* Glass theme for header */
+header {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    z-index: 100;
+    padding: 10px 20px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s ease;
+    overflow: hidden;
+}
+
+/* Hide the border by default */
+header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 15px;
+    padding: 2px; /* Adjust as needed for border thickness */
+    background: linear-gradient(90deg, #00f, rgb(0, 110, 255), rgb(0, 140, 255), #00f);
+    background-size: 400% 400%;
+    animation: borderMove 5s linear infinite;
+    -webkit-mask: 
+        linear-gradient(#fff 0 0) content-box, 
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: destination-out;
+    mask-composite: exclude; 
+    opacity: 0; /* Hide the border by default */
+    transition: opacity 0.4s ease; /* Smooth transition for the border */
+}
+
+/* Show the border on hover */
+header:hover::before {
+    opacity: 1; /* Show the border on hover */
+}
+
+/* Keyframes for the border animation */
+@keyframes borderMove {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 400% 0;
+    }
+}
+
+/* Ensuring the header content stays within the glass area */
+header nav, header h1 {
+    position: relative;
+    z-index: 1;
+}
+
+/* Header buttons */
+header nav ul li a {
+    position: relative;
+    z-index: 1;
+    text-decoration: none;
+    color: inherit;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background 0.4s ease, color 0.4s ease;
+}
+
+/* Prevent cursor change on hover */
+header nav ul li a:hover {
+    cursor: none;
+    background: white; /* Change background to white */
+    color: #000; /* Change text color to black */
+    border-radius: 10px; /* Rounded corners */
+}
+
+/* Ensure buttons' cursor remains default */
+header nav ul li a {
+    cursor: default;
+}
+
+
 
 .section {
     padding: 50px 20px;
