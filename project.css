@@ -85,3 +85,24 @@ body {
     border: 1px solid #FFFFFF; /* White border on hover */
     transform: scale(1.02); /* Slightly scale up on hover for depth effect */
 }
+
+/* Styles for the back button */
+.back-button {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+    background-color: #555;
+}
+
+.back-button i {
+    margin-right: 5px;
+}
