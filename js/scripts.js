@@ -72,4 +72,5 @@ document.addEventListener('DOMContentLoaded', function() {
         if (!rgb) return 255;
         return (rgb[0] * 299 + rgb[1] * 587 + rgb[2] * 114) / 1000;
     }
+
 });
