@@ -35,6 +35,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Typing animation setup
     const typingText = document.querySelector('.typing-text');
+    const typingCursor = document.createElement('span');
+    typingCursor.classList.add('typing-cursor');
+    typingText.appendChild(typingCursor);
+
     const textArray = [
         "Welcome, I’m Dhruv Hegde, a rising senior at Salem High School with primary interests in mechanical and computer engineering and a passion for aerospace design and astrophysics as well. I assume you’re here to learn more about me or seek to learn about the various projects I am undertaking in my freetime; fortunately, you’re in the right place. This website includes countless ideas and projects I have conceptualized or completed that I want to show the world and I hope you can get some value out of it. Although these are not all of my projects and a lot of major experiences are not included below, I am continuously updating this page with extraneous information about myself, and, who knows, I might possible add some of those one day, so feel free to check back in from time to time. ",
     ];
@@ -49,6 +53,7 @@ document.addEventListener('DOMContentLoaded', function() {
         if (charIndex < textArray[textArrayIndex].length) {
             typingText.textContent += textArray[textArrayIndex].charAt(charIndex);
             charIndex++;
+            updateCursor();
             setTimeout(type, typingDelay);
         }
     }
@@ -57,11 +62,16 @@ document.addEventListener('DOMContentLoaded', function() {
         if (charIndex > 0) {
             typingText.textContent = textArray[textArrayIndex].substring(0, charIndex - 1);
             charIndex--;
+            updateCursor();
             setTimeout(erase, erasingDelay);
         } else {
             textArrayIndex = (textArrayIndex + 1) % textArray.length;
             setTimeout(type, typingDelay);
         }
+    }
+
+    function updateCursor() {
+        typingCursor.style.left = `${typingText.offsetWidth}px`;
     }
 
     setTimeout(type, newTextDelay + 250); // Start typing animation after initial delay
@@ -71,5 +81,4 @@ document.addEventListener('DOMContentLoaded', function() {
         if (!rgb) return 255;
         return (rgb[0] * 299 + rgb[1] * 587 + rgb[2] * 114) / 1000;
     }
-
 });

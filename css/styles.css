@@ -214,15 +214,19 @@ header nav ul li a:hover {
 
 /* Project Card */
 .project-card {
-    background-color: rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(10px);
-    border-radius: 15px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    max-width: 300px;
-    height: 200px;
-    text-align: center;
+    position: relative;
+    display: inline-block;
+    width: 300px; /* Adjust as needed */
+    height: 200px; /* Adjust as needed */
+    margin: 20px;
+    background: rgba(255, 255, 255, 0.1); /* Glass effect */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Glass effect */
+    border-radius: 10px;
+    overflow: hidden;
     transition: transform 0.3s ease;
+    color: #fff;
+    text-align: left;
+    padding: 10px;
 }
 
 .project-card:hover {
@@ -331,9 +335,89 @@ header nav ul li a:hover {
 }
 
 .typing-text {
-    font-size: 18px; /* Adjust font size */
-    color: #fff; /* Text color */
+    font-size: 18px;
+    color: #fff;
     filter: blur(0.5px); /* Motion blur effect */
     white-space: pre-wrap; /* Allow wrapping at any point */
     line-height: 1.5; /* Adjust line height */
+    text-align: left; /* Align text to the left */
+    position: relative; /* Make position relative for cursor positioning */
 }
+
+.typing-cursor {
+    display: inline-block;
+    width: 2px;
+    background-color: #fff;
+    animation: blink 0.7s steps(2) infinite;
+    position: absolute;
+}
+
+@keyframes blink {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+}
+
+#articles {
+    padding: 50px 0;
+    text-align: center;
+}
+
+#articles h2 {
+    margin-bottom: 40px;
+    font-size: 2em;
+    color: #fff;
+}
+
+.article-card {
+    position: relative;
+    display: inline-block;
+    width: 300px; /* Adjust as needed */
+    height: 200px; /* Adjust as needed */
+    margin: 20px;
+    background: rgba(255, 255, 255, 0.1); /* Glass effect */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Glass effect */
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    color: #fff;
+    text-align: left;
+    padding: 10px;
+}
+
+.article-card h3 {
+    margin: 0 0 10px;
+    font-size: 1.5em;
+}
+
+.article-card p {
+    margin: 0 0 20px;
+    font-size: 1em;
+}
+
+.article-card .read-button {
+    position: absolute;
+    bottom: 20px;
+    font-family: "Outfit", sans-serif;
+    left: 20px;
+    padding: 10px 20px;
+    font-size: 1em;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.5);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.article-card .read-button:hover {
+    background: rgba(63, 63, 63, 0.7);
+}
+
+.article-card:hover {
+    transform: translateY(-10px);
+}
+
