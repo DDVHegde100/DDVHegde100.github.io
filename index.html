@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dhruv Hegde</title>
+  <link href="https://fonts.googleapis.com/css?family=Fjalla+One|Open+Sans" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1 class="title">Dhruv Hegde</h1>
+  <span class="tagline">Innovate, Create, Inspire</span>
+  <nav class="main-nav">
+    <ul>
+      <li><button class="nav-button active" id="about-page" data-page="about">About</button></li>
+      <li><button class="nav-button" id="articles-page" data-page="articles">Articles</button></li>
+      <li><button class="nav-button" id="publications-page" data-page="publications">Projects</button></li>
+      <li><button class="nav-button" id="contact-page" data-page="contact">Contact</button></li>
+    </ul>
+  </nav>
+  
+  <section data-page-name="about" class="page default">
+    <div class="about-me">
+      <p>About me content goes here...</p>
+    </div>
+  </section>
+  
+  <section data-page-name="articles" class="page">
+    <header>
+      <h1>Cool Articles</h1>
+    </header>
+    <div class="band">
+      <div class="item-1">
+        <a href="https://ddvhegde100.medium.com/" class="card">
+          <div class="thumb" style="background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/flex-1.jpg);"></div>
+          <article>
+            <h1>Deciphering the pursuit of happiness: Why do we live?</h1>
+            <span>Dhruv Hegde</span>
+          </article>
+        </a>
+      </div>
+      <div class="item-2">
+        <a href="https://ddvhegde100.medium.com/" class="card">
+          <div class="thumb" style="background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/users-2.png);"></div>
+          <article>
+            <h1>The premise of productivity</h1>
+            <span>Dhruv Hegde</span>
+          </article>
+        </a>
+      </div>
+      <div class="item-3">
+        <a href="https://ddvhegde100.medium.com/" class="card">
+          <div class="thumb" style="background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/flex-5.jpg);"></div>
+          <article>
+            <h1>Psychotic mind of every genius</h1>
+            <span>Dhruv Hegde</span>
+          </article>
+        </a>
+      </div>
+      <div class="item-4">
+        <a href="https://ddvhegde100.medium.com/" class="card">
+          <div class="thumb" style="background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/landing.png);"></div>
+          <article>
+            <h1>Why Axiology needs to be come a religion</h1>
+            <span>Dhruv Hegde</span>
+          </article>
+        </a>
+      </div>
+      <div class="item-5">
+        <a href="https://ddvhegde100.medium.com/" class="card">
+          <div class="thumb" style="background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/strange.jpg);"></div>
+          <article>
+            <h1>Stop reading articles with catchy headlines</h1>
+            <span>Dhruv Hegde</span>
+          </article>
+        </a>
+      </div>
+      <div class="item-6">
+        <a href="https://ddvhegde100.medium.com/" class="card">
+          <div class="thumb" style="background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/flor.jpg);"></div>
+          <article>
+            <h1>You're the best, son. I love you.</h1>
+            <span>Dhruv Hegde</span>
+          </article>
+        </a>
+      </div>
+      <div class="item-7">
+        <a href="https://ddvhegde100.medium.com/" class="card">
+          <div class="thumb" style="background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/china.png);"></div>
+          <article>
+            <h1>Gmail: the most successful accident</h1>
+            <span>Dhruv Hegde</span>
+          </article>
+        </a>
+      </div>
+    </div>
+  </section>
+  
+  <section data-page-name="projects" class="page">
+    <h2 class="subtitle">Projects</h2>
+    <fieldset>
+      <label style="--_img: url(https://assets.codepen.io/2585/fiddle-leaf.jpeg)">
+        <input type="radio" name="images" value="Fiddle Leaf">
+      </label>
+      <label style="--_img: url(https://assets.codepen.io/2585/pink-princess.jpeg)">
+        <input type="radio" name="images" value="Pink Princess">
+      </label>
+      <label style="--_img: url(https://assets.codepen.io/2585/kara-eads-zcVArTF8Frs-unsplash.jpg)">
+        <input type="radio" name="images" value="Monstera" checked>
+      </label>
+      <label style="--_img: url(https://assets.codepen.io/2585/pothos.jpeg)">
+        <input type="radio" name="images" value="Pothos">
+      </label>
+      <label style="--_img: url(https://assets.codepen.io/2585/rubber-tree.webp)">
+        <input type="radio" name="images" value="Rubber Tree">
+      </label>
+    </fieldset>
+    <div class="project-description">
+      <p>Select a project to see its description:</p>
+      <div id="project1" class="project-info">Project 1</div>
+      <div id="project2" class="project-info">Project 2</div>
+      <div id="project3" class="project-info">Project 3</div>
+      <div id="project4" class="project-info">Project 4</div>
+      <div id="project5" class="project-info">Project 5</div>
+    </div>
+  </section>  
+
+  <section data-page-name="contact" class="page">
+    <p>Twitter: <a href="https://twitter.com/YourTwitterHandle">@YourTwitterHandle</a></p>
+    <p>Instagram: <a href="https://www.instagram.com/YourInstagramHandle/">@YourInstagramHandle</a></p>
+  </section>
+  
+  <!-- Loading -->
+  <div class="loading">
+    <h1 class="loading-title">loading</h1>
+    <div class="loading-progress"></div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
