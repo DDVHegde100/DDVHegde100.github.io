@@ -1,14 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400&family=Roboto:wght@700&display=swap');
+
 body {
-  font-family: 'Open Sans';
-  background-color: rgb(212, 212, 212);
+    font-family: 'Poppins', sans-serif;
+    background-color: #d4d4d4;
 }
+
 
 img {
   max-width: 100%;
   height: auto;
 }
 
-.title,
+.title2,
 .loading-title {
   text-align: center;
   text-transform: uppercase;
@@ -22,7 +25,7 @@ img {
   margin-top: 1.7rem;
 }
 
-.title,
+.title2,
 .loading-title,
 .subtitle {
   font-family: 'Fjalla One';
@@ -34,7 +37,7 @@ img {
   display: block;
   letter-spacing: .3em;
   margin: 10px 0 40px;
-  color: #aaa;
+  color: #818181;
 }
 
 .profile-img {
@@ -128,6 +131,7 @@ img {
   left: 0;
   background: #000;
   transition: .75s;
+  z-index: 9999; /* Ensure loading screen is on top */
 }
 
 .loading-title {
@@ -229,7 +233,9 @@ header {
   top: 0;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   border-radius: 10px; /* Added to round the corners */
+  border: 3px solid #000000; /* Added border */
 }
+
 
 .card:hover {
   transform: translateY(-5px); /* Move card up on hover */
@@ -341,4 +347,142 @@ input:checked + label::before {
   background-image: url('image1.webp');
   background-size: cover;
   background-position: center;
+}
+
+.periodic-table {
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  grid-gap: 10px;
+  margin: auto;
+  max-width: 1200px;
+  justify-content: center;
+}
+
+.periodic-element {
+  padding: 3px;
+  position: relative;
+  z-index: 1;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: rgb(212, 212, 212);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  border: 5px solid #000000;
+}
+
+.periodic-element-inner {
+  width: 100%;
+  height: 100%;
+  padding: 10px 15px;
+  transition: inherit;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  font-size: 2em;
+  margin: 0;
+  transition: 0.3s ease-in-out;
+}
+
+.description {
+  font-size: 0.8em;
+  margin: 0;
+  text-align: center;
+  color: #707070;
+}
+
+.periodic-element:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(233, 233, 233, 0.1);
+  background: rgba(255,255,255,1);
+  border: 2px solid #000000;
+}
+
+.periodic-element[data-description]::after {
+  content: attr(data-description);
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px;
+  background-color: #f9f8f7;
+  color: #0e0d0d;
+  font-size: 10px;
+  line-height: 1.4;
+  border-radius: 6px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.periodic-element:hover::after {
+  opacity: 1;
+}
+
+/* Custom colors for different categories */
+.social-media {
+  background-color: linear-gradient(to bottom, #f9f871, #e7e461);
+  color: #000000;
+}
+
+.fun-stuff {
+  background-color: linear-gradient(to bottom, #f97e7e, #e46161);
+  color: #000000;
+}
+
+.just-trying {
+  background-color: linear-gradient(to bottom, #7ecbf9, #61b6e4);
+  color: #000000;
+}
+
+.intense-work {
+  background-color: linear-gradient(to bottom, #7ef97e, #61e461);
+  color: #000000;
+}
+
+/* Legend table styling */
+.legend-table {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.legend-table__marker {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  margin-right: 5px;
+  vertical-align: middle;
+}
+
+.legend-table__text {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.legend-table__direction {
+  display: block;
+  margin-top: 10px;
+  font-size: 0.8em;
+  color: #ccc;
+}
+
+/* Loading screen styles */
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #282c34;
+  z-index: 1000;
 }
