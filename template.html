@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Article Viewer</title>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="template.css">
+</head>
+<body>
+  <div class="container">
+    <header class="article-header">
+      <h1 class="article-title">Article Title Goes Here</h1>
+      <p class="article-meta">Dhruv Hegde |  November 28th, 2024</p>
+    </header>
+    <main class="article-content">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus scelerisque, libero eget egestas ultrices, orci justo pellentesque felis, id consequat orci felis vel orci. Suspendisse eu odio in magna viverra condimentum. Pellentesque in enim vel lorem ultricies luctus vel vitae libero.</p>
+      <p>Morbi dapibus erat ac venenatis scelerisque. Nam fermentum convallis sem, ac egestas elit dictum id. Ut nec sapien a ex tempor volutpat nec ac quam.</p>
+    </main>
+    <footer class="article-footer">
+      <div class="page-view-counter">Page Views: <span id="view-count">0</span></div>
+    </footer>
+  </div>
+
+  <script>
+    // Page view counter
+    let viewCount = localStorage.getItem('pageViews') || 0;
+    viewCount++;
+    localStorage.setItem('pageViews', viewCount);
+    document.getElementById('view-count').textContent = viewCount;
+  </script>
+</body>
+</html>
