@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medium UI Clone</title>
+    <style>
+        body {
+            font-family: 'Georgia', serif;
+            line-height: 1.8;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: #fafafa;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        header {
+            margin-top: 50px;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            font-weight: bold;
+            margin: 0 0 10px;
+            line-height: 1.2;
+        }
+
+        h2 {
+            font-size: 1.5em;
+            font-weight: 400;
+            color: #555;
+            margin: 0 0 20px;
+        }
+
+        .view-counter {
+            font-size: 0.9em;
+            color: #999;
+            margin: 0 0 20px;
+        }
+
+        p {
+            margin: 0 0 20px;
+        }
+
+        blockquote {
+            border-left: 5px solid black;
+            padding-left: 15px;
+            margin: 20px 0;
+            color: #444;
+            font-style: italic;
+            font-size: 1.2em;
+            line-height: 1.6;
+        }
+
+        footer {
+            margin-top: 40px;
+            font-size: 0.9em;
+            color: #888;
+            text-align: center;
+        }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const viewCounter = document.querySelector(".view-counter");
+            let views = localStorage.getItem("pageViews") || 0;
+            views = parseInt(views) + 1;
+            localStorage.setItem("pageViews", views);
+            viewCounter.textContent = `${views.toLocaleString()} views • Updated Dec 25, 2024`;
+        });
+    </script>
+</head>
+<body>
+
+<header>
+    <h1>Your Medium-like Title</h1>
+    <h2>Your engaging subtitle goes here.</h2>
+    <p class="view-counter">Loading views...</p>
+</header>
+
+<article>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum. Cras venenatis euismod malesuada.</p>
+
+    <p>Proin et arcu vehicula, consequat sem non, consectetur nunc. Aliquam erat volutpat. Donec volutpat sapien in metus malesuada, non hendrerit justo blandit.</p>
+
+    <blockquote>
+        "This is a blockquote example, styled to mimic the black rectangle effect seen on Medium."
+    </blockquote>
+
+    <p>Nunc tincidunt, justo at fermentum auctor, sapien risus blandit urna, at cursus orci velit id felis. Maecenas at interdum turpis, nec convallis orci.</p>
+
+    <p>Phasellus accumsan, justo sit amet malesuada dapibus, lacus nisl consectetur lectus, a vehicula mi libero eget felis.</p>
+</article>
+
+<footer>
+    <p>© 2024 Your Name</p>
+</footer>
+
+</body>
+</html>
