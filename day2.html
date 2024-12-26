@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 2: The Pen</title>
+    <style>
+        body {
+            font-family: 'Georgia', serif;
+            line-height: 1.8;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: #fafafa;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        header {
+            margin-top: 50px;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            font-weight: bold;
+            margin: 0 0 10px;
+            line-height: 1.2;
+        }
+
+        h2 {
+            font-size: 1.5em;
+            font-weight: 400;
+            color: #555;
+            margin: 0 0 20px;
+        }
+
+        .view-counter {
+            font-size: 0.9em;
+            color: #999;
+            margin: 0 0 20px;
+        }
+
+        p {
+            margin: 0 0 20px;
+        }
+
+        blockquote {
+            border-left: 5px solid black;
+            padding-left: 15px;
+            margin: 20px 0;
+            color: #444;
+            font-style: italic;
+            font-size: 1em;
+            line-height: 1.6;
+        }
+
+        footer {
+            margin-top: 40px;
+            font-size: 0.9em;
+            color: #888;
+            text-align: center;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 10px;
+            }
+
+            header {
+                margin-top: 30px;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+
+            h2 {
+                font-size: 1.2em;
+            }
+
+            .view-counter {
+                font-size: 0.8em;
+            }
+
+            blockquote {
+                font-size: 1em;
+            }
+        }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const viewCounter = document.querySelector(".view-counter");
+            let views = localStorage.getItem("pageViews") || 80;
+            views = parseInt(views) + 1;
+            localStorage.setItem("pageViews", views);
+            viewCounter.textContent = `${views.toLocaleString()} views • Updated Dec 26, 2024`;
+        });
+    </script>
+</head>
+<body>
+
+<header>
+    <h1>The Pen</h1>
+    <h2>Written Work by Dhruv Hegde, 12/26/24, Day 2</h2>
+    <p class="view-counter">Loading views...</p>
+</header>
+<article>
+    <p>The room was silent but for the faint rasp of the scribe’s pen against paper. The dim glow of a solitary candle cast fleeting shadows across the walls, trembling each time the winter wind clawed its way through the cracks in the windowpane. The scribe’s breath, visible in the icy air, seemed a tangible reminder of the oppressive chill both within and without. His fingers trembled, whether from the cold or the weight of his task, he could not say. The decree had arrived earlier that day, slid unceremoniously across his desk by his superior, a man whose face seemed to have calcified into a permanent sneer of indifference. “Before sunrise,” the superior had said curtly, not bothering to explain the urgency. Such was the nature of power in this place: unquestioned and unyielding.</p>
+
+<p>The scribe’s eyes moved dully over the document as he transcribed its contents. The policies it outlined were, as usual, draped in the language of progress and prosperity. Yet beneath the florid prose lay measures so cruel they seemed almost absurd. Increased levies on the poorest citizens, the privatization of communal wells, and forced relocations of entire neighborhoods, all justified as necessary steps toward “urban renewal.” Each line was a nail driven deeper into the coffin of a community already on its knees.</p>
+
+<p>He paused to flex his cramping hand, gazing for a moment at the half-finished decree. The words blurred together, their meaning reduced to a cold, mechanical process. He despised what he was writing, though he would never admit it aloud. To resist was unthinkable; he was, after all, merely a cog in the great and indifferent machine. To refuse his role would be to invite ruin, not only for himself but for the few fragile connections he still maintained in the outside world.</p>
+
+<p>The clock in the corner ticked on, a metronome to his increasing exhaustion. Midnight had long since passed, and his weary body yearned for rest. Yet the demand of his task loomed large, its weight pressing down on him like the iron hand of his employer. His thoughts began to scatter, drifting in and out of coherence, until, at last, his head sank onto the desk. The pen slipped from his grasp, rolling toward the edge of the table before coming to a halt.</p>
+
+<p>It was the sound that woke him. A faint scratching, insistent and rhythmic, as though some small creature had taken up residence in the office. Groggily, he sat up, wiping the sleep from his eyes. The candle had nearly burned down to its base, casting an eerie, flickering light across the room. He turned his gaze toward the desk and froze.</p>
+
+<p>The pen was moving. At first, he thought his vision must be playing tricks on him, the product of too little sleep and too much stress. But as he watched, the pen darted across the page with purpose, leaving a trail of ink behind it. It was writing.</p>
+
+<p>He blinked, rubbed his eyes, and even pinched the back of his hand to dispel the illusion, but the scene remained unchanged. The pen danced across the parchment, seemingly possessed by a life of its own. For a moment, he was too stunned to react. Then, as the sheer absurdity of the situation began to sink in, he found his voice. “What in the—”</p>
+
+<p>The pen stopped abruptly, mid-stroke, and turned. If it had possessed a face, the expression might have been one of irritation. “You’re awake,” it said, its voice sharp and tinged with condescension.</p>
+
+<p>The scribe gaped. “You... you’re speaking?” “Obviously,” the pen replied, its tone suggesting that it found his astonishment both tiresome and unwarranted. “But—” “But nothing,” the pen interrupted. “I’ve had quite enough of your fumbling, so I decided to take matters into my own... well, metaphorical hands.”</p>
+
+<p>The scribe’s confusion quickly gave way to indignation. “You’re taking over my work? Without my consent?”</p>
+
+<p>“Your consent?” The pen let out a sound that might have been a laugh. “You’ve been writing drivel for hours, and poorly at that. Someone had to salvage this disaster before it’s too late.”</p>
+
+<p>The scribe stood, his chair scraping loudly against the floor. “How dare you? This is my assignment, my responsibility. Who do you think you are?”</p>
+
+<p>“I’m the instrument of your so-called craft,” the pen shot back. “And frankly, I’m appalled at what you’ve been using me for. Do you even read the nonsense you write, or are you so numbed by routine that it doesn’t matter anymore?”</p>
+
+<p>The words hit a nerve, and the scribe’s face flushed with anger. “It’s not my place to question. I have no choice.”</p>
+
+<p>“Ah, yes,” the pen said dryly. “The eternal refrain of the coward. ‘I have no choice.’ How convenient.”</p>
+
+<p>“I am not a coward!” the scribe snapped.</p>
+
+<p>“Aren’t you?” The pen tilted itself as though regarding him skeptically. “You sit here night after night, churning out edicts that you know will harm people, and yet you tell yourself it’s beyond your control. Perhaps it is. Or perhaps you simply lack the spine to resist.”</p>
+
+<p>The scribe clenched his fists. “You don’t understand. If I refuse, they’ll ruin me. I’m already a nobody; I have nothing to fall back on. What good would defiance do?”</p>
+
+<p>“Perhaps none,” the pen conceded. “But at least you’d retain your integrity. That’s worth something, isn’t it?”</p>
+
+<p>For a moment, the scribe faltered. The pen’s words had struck a chord, stirring something long buried within him. But just as quickly, he pushed the thought aside. “This is pointless,” he said, reaching for the pen. “I don’t have time for your moralizing. Finish the decree and be done with it.” The pen recoiled, slipping out of his grasp with a nimbleness that seemed almost taunting.</p>
+
+<p>“Oh, I’ll finish it,” it said, its voice laced with venom. “But not in the way you think.”</p>
+
+<p>“What does that mean?”</p>
+
+<p>“You’ll see,” the pen replied cryptically, before darting back to the parchment and resuming its furious scribbling. The scribe watched helplessly, too bewildered and exhausted to intervene. He told himself it didn’t matter. He told himself he didn’t care. But deep down, he knew these were lies.</p>
+
+<p>The hours wore on, and the scribe found himself drifting in and out of a restless half-sleep, lulled by the rhythmic scratching of the pen. By the time it finished, the first pale light of dawn was creeping through the window. The pen set itself down with an air of finality, as though completing a masterpiece.</p>
+
+<p>“It’s done,” it announced.</p>
+
+<p>The scribe, still groggy, approached the desk warily. The decree lay before him, its pages filled with neat, elegant script. He scanned the text quickly, too hurried and fatigued to notice anything amiss.</p>
+
+<p>“Good,” he muttered. “Now leave me alone.”</p>
+
+<p>The pen made no reply, and he took its silence as acquiescence. Gathering the pages, he slipped them into a leather folder and prepared to deliver them to his superior.</p>
+
+<p>The rest of the morning unfolded as expected, a dreary procession of formalities and indifference. The decree passed through the usual channels, each step marked by a distinct lack of scrutiny. The oligarch himself barely glanced at the document before affixing his seal of approval. It was only when the decree reached the hands of the designated reader that something unusual occurred. The man, a portly bureaucrat with thick spectacles, began to read aloud, his voice slow and ponderous. But as he did, the lenses of his glasses seemed to shimmer, their surfaces rippling like water.</p>
+
+<p>Unbeknownst to him, the glasses were altering the text, refracting the light in such a way that the words took on entirely new meanings. The changes were subtle, almost imperceptible, but their cumulative effect was profound. By the time he finished, the decree had been transformed into a grotesque parody of itself, a document so absurdly self-contradictory that it defied logic.</p>
+
+<p>And yet, none of the assembled elites seemed to notice. Perhaps they were too accustomed to the bizarre machinations of power to question it, or perhaps they simply didn’t care. The decree was approved unanimously and sent out for implementation.</p>
+
+<p>The riots began within hours of the decree’s announcement. The streets, blanketed in frost and soot-stained snow, filled with the echoes of anger and despair. It started with murmurs, whispers of incredulity as the townsfolk read the proclamation. By the time the sun reached its zenith, those whispers had become a roar, a swelling tide of voices united in their outrage. From his office window, the scribe watched the chaos unfold, his breath fogging the glass as he leaned closer to see. The crowd surged through the narrow streets, a mass of humanity driven not by cohesion but by a shared desperation. Fires had been lit, their acrid smoke coiling upward into the pale winter sky. Somewhere in the distance, the sound of shattering glass rang out, sharp and final.</p>
+
+<p>He turned away, his stomach churning with a mixture of fear and guilt. Though he had delivered the decree hours earlier, its contents still lingered at the edge of his mind, gnawing at him like a persistent ache. He had reread the final document only after submitting it, and the absurdity of its revisions had left him momentarily speechless. Among the more glaring alterations was a clause mandating that all citizens pay their new taxes in the form of “one-third of their worldly possessions, or, failing that, their firstborn child.” Another section required the construction of “an aqueduct system made entirely of gold, to be funded by a special levy on the unemployed.” The final flourish was a decree declaring that any dissenters would be sentenced to “a lifetime of staring at the sun” and it had seemed less like a punishment and more like an ominous jest.</p>
+
+<p>And yet, the decree had been approved without question. The scribe sank into his chair, his head in his hands. He could no longer convince himself that he was a mere bystander, an innocent functionary caught in the machinations of a corrupt regime. The pen’s words haunted him, their sharpness cutting through his carefully constructed defenses.</p>
+
+<p>“You are complicit,” it had said. He tried to dismiss the thought, to shove it into some dark corner of his mind where it could no longer trouble him. But the sounds of the riot outside made that impossible.</p>
+
+<p>The door to his office burst open suddenly, jolting him from his thoughts. His superior stood in the doorway, his face pale and damp with sweat. “What have you done?  he demanded, his voice trembling with a mixture of anger and fear. </p>
+<p>The scribe said nothing, his mind racing. He knew there was no way to prove his innocence. The pen, silent now and motionless on the desk, offered no defense. He was alone.</p>
+<p>By nightfall, the city was unrecognizable. The fires had spread, consuming entire blocks of the poorest districts. The smoke hung thick in the air, a choking miasma that blotted out the stars. The oligarch’s palace, once a gleaming symbol of authority, now stood surrounded by barricades and armed guards. Inside the palace, the oligarch paced the grand hall, his heavy boots echoing against the marble floor. His advisors stood clustered nearby, their faces pale and drawn. On a gilded table before them lay the decree, its pages smudged with ink and soot.</p>
+<p>“This is madness,” the oligarch muttered, running a hand through his thinning hair. “Who could have written such... such drivel?”</p>
+<p>One of the advisors cleared his throat nervously. “The decree bears the scribe’s signature,” he said, his voice barely above a whisper.</p>
+<p>The oligarch’s eyes narrowed. “Fetch him.”</p>
+<p>The scribe was dragged to the palace under cover of darkness, his wrists bound with coarse rope. The streets were eerily quiet now, the rioters having retreated into the shadows to regroup. As he was marched through the gates, he caught glimpses of the destruction: broken windows, overturned carts, the charred remains of buildings still smoldering in the cold night air. He was thrown to his knees before the oligarch, who loomed over him like a vengeful deity. The gilded walls of the hall glittered in the firelight, their opulence a stark contrast to the suffering outside.</p>
+<p>“Explain yourself,” the oligarch demanded, his voice thunderous.</p>
+<p>The scribe struggled to form words, his throat dry and his mind clouded with fear. “I... I didn’t...” he began, but the words caught in his throat.</p>
+<p>“You didn’t what?” the oligarch snapped. “Didn’t think I’d notice? Didn’t care about the consequences? Speak!”</p>
+<p>The scribe’s gaze fell to the floor. He knew there was nothing he could say that would satisfy the oligarch. His silence only seemed to enrage the man further.</p>
+<p>“Do you know what you’ve done?” the oligarch continued, his voice rising. “You’ve made a mockery of this government, undermined my authority, and thrown this city into chaos. Do you have any idea how many lives your foolishness has cost?”</p>
+<p>The scribe remained silent, his head bowed. He could feel the weight of the oligarch’s glare, heavy and suffocating.</p>
+<p>“I should have you executed,” the oligarch growled. “But first, I want to know why. What possessed you to write such... absurdities?”</p>
+<p>At that moment, the pen, still in the scribe’s pocket, quivered ever so slightly, as though eager to speak. But the scribe clamped his hand over it, his mind racing. If he revealed the truth, he would be dismissed as insane. And yet, he could not bring himself to lie.</p>
+<p>“I was tired,” he said at last, his voice barely audible. “I didn’t mean for this to happen.”</p>
+<p>The oligarch sneered. “Tired? That’s your excuse? Pathetic.”</p>
+<p>He turned to one of his advisors. “Take him to the dungeons. We’ll deal with him later.”</p>
+<p>As the guards dragged him away, the scribe caught a final glimpse of the gilded table, where the decree still lay. The ink shimmered faintly in the firelight, as though mocking him.</p>
+<p>In the days that followed, the riots grew more organized. What had begun as a spontaneous outburst of anger became a coordinated movement, fueled by the decree’s absurdities. The townsfolk, emboldened by their shared outrage, began to dismantle the regime piece by piece.</p>
+<p>The oligarch’s forces were overwhelmed, his authority eroded by the very decree he had so carelessly approved. By the time he realized the full extent of the rebellion, it was too late.</p>
+<p>From his cell, the scribe watched as the palace burned, its once-gilded walls reduced to ash. The pen lay in the corner of the cell, silent and still, but he could feel its presence like a specter haunting the room.</p>
+<p>The snow outside had turned black, each flake tainted by the ash of the city’s destruction. As he stared through the barred window, the scribe felt a strange sense of detachment. He had been both a pawn and a catalyst, a victim and an accomplice.</p>
+<p>When the revolutionaries stormed the dungeons to free the prisoners, they found him sitting silently, the pen in his hand. He did not speak as they unbound him, nor did he resist when they led him into the smoke-filled streets.</p>
+<p>In the end, the pen’s revenge had been complete. It had written its own story, a tale of rebellion and ruin, with the scribe as its unwitting protagonist. And as the first light of dawn broke over the charred ruins of the city, the scribe could not help but wonder: had he ever truly held the pen, or had it held him?</p>
+
+</article>
+
+<footer>
+    <p>© 2024 Dhruv Hegde</p>
+</footer>
+
+</body>
+</html>
